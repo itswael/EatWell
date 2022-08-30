@@ -1,0 +1,26 @@
+[
+  {
+    "id":"r1",
+    "name": "test",
+    "address": "testRest 5, testCity",
+    "cuisine": "testifood",
+    "website": "https://www.testrest.com",
+    "description": "it's awesome!"
+  },
+  {
+    "id":"r2",
+    "name": "test2",
+    "address": "testRest2 5, testCity",
+    "cuisine": "testum",
+    "website": "http://test2.tastes.com",
+    "description": "it's testum"
+  },
+  {
+    "id":"r3",
+    "name": "indoChinese",
+    "address": "tasteStreet 5, testcity",
+    "cuisine": "indian",
+    "website": "https://www.testindianrest.com",
+    "description": "great taste"
+  }
+]
