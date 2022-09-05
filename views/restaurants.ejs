@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include("includes/head")%>;
+    <link rel="stylesheet" href="styles/restaurants.css" />    
+  </head>
+  <body>
+    <%-include('includes/header')%>
+    <%-include("includes/aside")%>
+    <main>
+      <h1>Recommended restaurants</h1>
+      <% if (noOfRestaurants === 0){%>
+      <p class="nav-item">
+        Unfortunately we don't have any restaurantat the moment!! Why not you
+        <a href="/recommend">recommend</a> some?
+      </p>
+      <% } else{ %>
+      <p>Find your next favorite restaurants with help of our other users!</p>
+      <p>we have found <%= noOfRestaurants %> Restaurants</p>
+      <form action="/restaurants" method="GET">
+        <input type="hidden" name="order" value="<%= nextOrder %>" id="">
+        <button class="btn">Change Order</button>
+      </form>      
+      <ul id="restaurants-list">
+        <% for(const restaurant of restaurants){%>
+        <%-include("includes/restaurant/restaurant-item",{restaurant: restaurant})%>
+        <% } %>
+      </ul>
+      <% } %>
+    </main>
+  </body>
+</html>
